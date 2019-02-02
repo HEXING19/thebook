@@ -1,0 +1,67 @@
+{
+    "plugins": ["donate",
+                "-sharing",
+                "sharing-plus",
+                "anchor-navigation-ex"],
+    "pluginsConfig": {
+        "donate": {
+          "wechat": "/Pay/WeChat.png",
+          "alipay": "/Pay/Ali.jpg",
+          "title": "",
+          "button": "打赏",
+          "alipayText": "支付宝",
+          "wechatText": "微信"
+        }
+    },
+      "sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": false,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": true,
+            "qzone": true,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": true,
+            "whatsapp": false,
+            "all": [
+                "facebook",
+                "google",
+                "twitter",
+                "weibo",
+                "qq",
+                "linkedin",
+                "qzone",
+                "douban"
+            ]
+        },
+        "anchor-navigation-ex":{
+            "showLevel": true,
+            "associatedWithSummary": true,
+            "printLog": false,
+            "multipleH1": true,
+            "mode": "float",
+            "showGoTop":true,
+        "float": {
+            "floatIcon": "fa fa-navicon",
+            "showLevelIcon": false,
+            "level1Icon": "fa fa-hand-o-right",
+            "level2Icon": "fa fa-hand-o-right",
+            "level3Icon": "fa fa-hand-o-right"
+        },
+            "pageTop": {
+            "showLevelIcon": false,
+            "level1Icon": "fa fa-hand-o-right",
+            "level2Icon": "fa fa-hand-o-right",
+            "level3Icon": "fa fa-hand-o-right"
+    }
+}
+
+}
