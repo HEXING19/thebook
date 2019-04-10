@@ -1,0 +1,408 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>如何使用Kali破解加密压缩文件密码 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch3.html" />
+    
+    
+    <link rel="prev" href="ch2_1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch1.html">
+            
+                <a href="ch1.html">
+            
+                    
+                    网络基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="ch1_1.html">
+            
+                <a href="ch1_1.html">
+            
+                    
+                    小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch2.html">
+            
+                <a href="ch2.html">
+            
+                    
+                    Kali渗透测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="ch2_0.html">
+            
+                <a href="ch2_0.html">
+            
+                    
+                    内网渗透超级好用，永恒之蓝了解一下优雅Exploit远程Windows PC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="ch2_1.html">
+            
+                <a href="ch2_1.html">
+            
+                    
+                    利用Metasploit中的Eternalblue和Doublepulsar Exploit远程Windows PC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="ch2_2.html">
+            
+                <a href="ch2_2.html">
+            
+                    
+                    如何使用Kali破解加密压缩文件密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch3.html">
+            
+                <a href="ch3.html">
+            
+                    
+                    超简单的Kali桌面美化教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch4.html">
+            
+                <a href="ch4.html">
+            
+                    
+                    梯子服务推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >如何使用Kali破解加密压缩文件密码</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x4F7F;&#x7528;john-the-ripper&#x7834;&#x89E3;&#x52A0;&#x5BC6;&#x6587;&#x4EF6;&#x5BC6;&#x7801;"><b>1.1. </b>&#x5982;&#x4F55;&#x4F7F;&#x7528;John the Ripper&#x7834;&#x89E3;&#x52A0;&#x5BC6;&#x6587;&#x4EF6;&#x5BC6;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#john-the-ripper&#x5DE5;&#x5177;&#x4ECB;&#x7ECD;"><b>1.1.1. </b>John the Ripper&#x5DE5;&#x5177;&#x4ECB;&#x7ECD;</a></li></ul><li><span class="title-icon "></span><a href="#&#x9A6C;&#x4E0A;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x7684;&#x6559;&#x7A0B;"><b>1.2. </b>&#x9A6C;&#x4E0A;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x7684;&#x6559;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x5BC6;&#x7801;&#x7684;&#x7834;&#x89E3;"><b>1.3. </b>&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x5BC6;&#x7801;&#x7684;&#x7834;&#x89E3;</a></li><li><span class="title-icon "></span><a href="#&#x751F;&#x6210;&#x8BE5;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x7684;hash&#x503C;"><b>1.4. </b>&#x751F;&#x6210;&#x8BE5;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x7684;hash&#x503C;</a></li><li><span class="title-icon "></span><a href="#&#x5229;&#x7528;hash&#x503C;&#x6765;&#x7834;&#x89E3;&#x5BC6;&#x7801;"><b>1.5. </b>&#x5229;&#x7528;hash&#x503C;&#x6765;&#x7834;&#x89E3;&#x5BC6;&#x7801;</a></li><li><span class="title-icon "></span><a href="#&#x5BC6;&#x7801;&#x9A8C;&#x8BC1;"><b>1.6. </b>&#x5BC6;&#x7801;&#x9A8C;&#x8BC1;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x5982;&#x4F55;&#x4F7F;&#x7528;john-the-ripper&#x7834;&#x89E3;&#x52A0;&#x5BC6;&#x6587;&#x4EF6;&#x5BC6;&#x7801;"><a name="&#x5982;&#x4F55;&#x4F7F;&#x7528;john-the-ripper&#x7834;&#x89E3;&#x52A0;&#x5BC6;&#x6587;&#x4EF6;&#x5BC6;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x4F7F;&#x7528;john-the-ripper&#x7834;&#x89E3;&#x52A0;&#x5BC6;&#x6587;&#x4EF6;&#x5BC6;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x5982;&#x4F55;&#x4F7F;&#x7528;John the Ripper&#x7834;&#x89E3;&#x52A0;&#x5BC6;&#x6587;&#x4EF6;&#x5BC6;&#x7801;</h2>
+<p>&#x5982;&#x679C;&#x9047;&#x5230;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x60F3;&#x770B;&#x7684;&#x538B;&#x7F29;&#x5305;&#xFF0C;&#x4F46;&#x662F;&#x538B;&#x7F29;&#x5305;<strong><em>&#x6709;&#x5BC6;&#x7801;</em></strong>&#xFF0C;<strong><em>&#x89E3;&#x538B;&#x4E0D;&#x4E86;&#x600E;&#x4E48;&#x529E;</em></strong>&#xFF1F;</p>
+<p>&#x7834;&#x89E3;&#xFF1F;&#x7528;&#x4EC0;&#x4E48;&#x5DE5;&#x5177;&#x5462;&#xFF1F;&#x4F1A;&#x5F88;&#x8017;&#x65F6;&#x5417;&#xFF1F;</p>
+<p><strong><em>&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x53EF;&#x4EE5;&#x7834;&#x89E3;&#x52A0;&#x5BC6;&#x7684;&#x4EFB;&#x4F55;&#x6587;&#x4EF6;&#xFF1F;&#x4F60;&#x76F8;&#x4FE1;&#x5417;&#xFF1F;</em></strong></p>
+<p>&#x5982;&#x4F55;&#x7834;&#x89E3;&#x52A0;&#x5BC6;&#x7684;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#xFF1F;&#x65E0;&#x8BBA;&#x662F;ZIP&#x8FD8;&#x662F;RAR
+&#xFF0C;&#x6216;&#x8005;&#x662F;&#x7834;&#x89E3;&#x52A0;&#x5BC6;&#x6587;&#x4EF6;&#xFF0C;&#x4F46;&#x662F;<strong>&#x524D;&#x63D0;&#x662F;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x9700;&#x8981;&#x6709;hash&#x503C;</strong></p>
+<h3 id="john-the-ripper&#x5DE5;&#x5177;&#x4ECB;&#x7ECD;"><a name="john-the-ripper&#x5DE5;&#x5177;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#john-the-ripper&#x5DE5;&#x5177;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. John the Ripper&#x5DE5;&#x5177;&#x4ECB;&#x7ECD;</h3>
+<p>&#x5173;&#x4E8E;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x5BC6;&#x7801;&#x7684;&#x7834;&#x89E3;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x4F7F;&#x7528;&#x5230;John the Ripper&#x8FD9;&#x4E2A;Kali&#x81EA;&#x5E26;&#x7684;&#x5DE5;&#x5177;
+&#x63A5;&#x4E0B;&#x6765;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x5173;&#x4E8E;&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;<a href="https://www.openwall.com/john/" title="John the Ripper" target="_blank">&#x5B98;&#x7F51;</a>&#x7684;&#x63CF;&#x8FF0;</p>
+<p>John the Ripper&#x662F;&#x4E00;&#x6B3E;&#x5FEB;&#x901F;&#x5BC6;&#x7801;&#x7834;&#x89E3;&#x7A0B;&#x5E8F;&#xFF0C;&#x76EE;&#x524D;&#x53EF;&#x7528;&#x4E8E;Unix&#xFF0C;Windows&#xFF0C;DOS&#x548C;OpenVMS&#x7B49;&#x591A;&#x79CD;&#x7248;&#x672C;&#x3002;&#x5176;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x662F;&#x68C0;&#x6D4B;&#x5F31;Unix&#x5BC6;&#x7801;&#x3002;&#x9664;&#x4E86;&#x5728;&#x5404;&#x79CD;Unix&#x7CFB;&#x7EDF;&#x4E2D;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x51E0;&#x79CD;&#x5BC6;&#x7801;&#x54C8;&#x5E0C;&#x7C7B;&#x578B;&#x4E4B;&#x5916;&#xFF0C;&#x652F;&#x6301;&#x5F00;&#x7BB1;&#x5373;&#x7528;&#x7684;&#x662F;Windows LM&#x54C8;&#x5E0C;&#xFF0C;&#x4EE5;&#x53CA;&#x793E;&#x533A;&#x589E;&#x5F3A;&#x7248;&#x672C;&#x4E2D;&#x7684;&#x8BB8;&#x591A;&#x5176;&#x4ED6;&#x54C8;&#x5E0C;&#x548C;&#x5BC6;&#x7801;
+&#x603B;&#x4E4B;&#x4E00;&#x53E5;&#x8BDD;&#x7528;&#x4E8E;&#x5BC6;&#x7801;&#x7834;&#x89E3;&#xFF0C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x5BF9;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x7684;&#xFF0C;&#x8FD8;&#x6709;&#x5176;&#x4ED6;&#x5F88;&#x591A;&#x7528;&#x9014;&#xFF0C;&#x66F4;&#x591A;&#x7528;&#x6CD5;&#x53C2;&#x8003;<a href="https://tools.kali.org/password-attacks/john" title="KALI TOOL" target="_blank">KALI TOOL</a></p>
+<h2 id="&#x9A6C;&#x4E0A;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x7684;&#x6559;&#x7A0B;"><a name="&#x9A6C;&#x4E0A;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x7684;&#x6559;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x9A6C;&#x4E0A;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x7684;&#x6559;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x9A6C;&#x4E0A;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x7684;&#x6559;&#x7A0B;</h2>
+<h2 id="&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x5BC6;&#x7801;&#x7684;&#x7834;&#x89E3;"><a name="&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x5BC6;&#x7801;&#x7684;&#x7834;&#x89E3;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x5BC6;&#x7801;&#x7684;&#x7834;&#x89E3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x5BC6;&#x7801;&#x7684;&#x7834;&#x89E3;</h2>
+<p>&#x6211;&#x4EEC;&#x770B;&#x5230;&#x6709;&#x4E00;&#x4E2A;&#x52A0;&#x5BC6;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#xFF0C;&#x6211;&#x4EEC;&#x5C1D;&#x8BD5;&#x89E3;&#x538B;&#x7684;&#x65F6;&#x5019;&#x8981;&#x6C42;&#x6211;&#x4EEC;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x4E0D;&#x77E5;&#x9053;&#x5BC6;&#x7801;&#xFF0C;&#x8981;&#x600E;&#x4E48;&#x529E;&#x5462;&#xFF1F;
+<img src="ch2/2/passwd.png" alt="passwd">
+&#x4E4B;&#x524D;&#x63D0;&#x5230;&#x8FC7;John the Ripper&#x53EF;&#x4EE5;&#x7834;&#x89E3;&#x5BC6;&#x7801;&#xFF0C;&#x524D;&#x63D0;&#x662F;&#x9700;&#x8981;&#x6709;hash&#x503C;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5982;&#x4F55;&#x751F;&#x6210;hash&#x503C;&#x5462;&#xFF1F;
+<strong>&#x4F7F;&#x7528;rar2john&#x6216;&#x8005;zip2john</strong>&#xFF0C;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x54EA;&#x4E00;&#x4E2A;&#xFF0C;&#x9700;&#x8981;&#x770B;&#x4F60;&#x7684;&#x52A0;&#x5BC6;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x7684;<strong>&#x7C7B;&#x578B;</strong></p>
+<h2 id="&#x751F;&#x6210;&#x8BE5;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x7684;hash&#x503C;"><a name="&#x751F;&#x6210;&#x8BE5;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x7684;hash&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x751F;&#x6210;&#x8BE5;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x7684;hash&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x751F;&#x6210;&#x8BE5;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x7684;hash&#x503C;</h2>
+<p>&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x7684;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x662F;rar&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x4F7F;&#x7528;rar2john
+<img src="ch2/2/hash.png" alt="hash"></p>
+<p>&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x547D;&#x4EE4;rar2john + &#x538B;&#x7F29;&#x6587;&#x4EF6;&#x540D;</p>
+<pre><code>rar2john demo.rar
+</code></pre><p>&#x6309;&#x4E0B;&#x56DE;&#x8F66;&#xFF0C;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x4F1A;&#x51FA;&#x73B0;&#x4E00;&#x4E9B;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;&#x5C31;&#x662F;&#x4F7F;&#x7528;rar2john&#x751F;&#x6210;&#x7684;hash&#x503C;
+&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x4E86;&#x5982;&#x4F55;&#x751F;&#x6210;hah&#x503C;&#xFF0C;&#x90A3;&#x5149;&#x663E;&#x793A;&#x51FA;&#x6765;&#x4E0D;&#x53EF;&#x4EE5;&#x554A;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x4FDD;&#x5B58;&#x81F3;&#x4E00;&#x4E2A;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x662F;&#x4E0D;&#x662F;&#x9996;&#x5148;&#x60F3;&#x5230;&#x7684;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x590D;&#x5236;&#xFF0C;&#x7136;&#x540E;&#x653E;&#x5165;&#x4E00;&#x4E2A;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x4E2D;&#xFF1F;
+&#x8FD9;&#x6837;&#x5B50;&#x505A;&#x4E5F;&#x53EF;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x66F4;&#x7B80;&#x4FBF;&#x7684;&#x65B9;&#x6CD5;,&#x6211;&#x4EEC;&#x4F7F;&#x7528;<strong>&#x91CD;&#x5B9A;&#x5411;</strong>&#xFF0C;&#x5C06;&#x8F93;&#x51FA;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x4E00;&#x4E2A;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x4E2D;</p>
+<pre><code>rar2john demo.rar &gt; hash.txt
+</code></pre><p>&#x8FD9;&#x6837;&#x5B50;&#x662F;&#x4E0D;&#x662F;&#x7B80;&#x4FBF;&#x591A;&#x4E86;
+<img src="ch2/2/hashtxt.png" alt="txt">
+&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x591A;&#x4E86;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;hash.txt</p>
+<h2 id="&#x5229;&#x7528;hash&#x503C;&#x6765;&#x7834;&#x89E3;&#x5BC6;&#x7801;"><a name="&#x5229;&#x7528;hash&#x503C;&#x6765;&#x7834;&#x89E3;&#x5BC6;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x5229;&#x7528;hash&#x503C;&#x6765;&#x7834;&#x89E3;&#x5BC6;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x5229;&#x7528;hash&#x503C;&#x6765;&#x7834;&#x89E3;&#x5BC6;&#x7801;</h2>
+<p>&#x6240;&#x6709;&#x4E1C;&#x897F;&#x51C6;&#x5907;&#x597D;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6765;&#x9A8C;&#x8BC1;&#x4E00;&#x4E0B;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x7834;&#x89E3;&#x5BC6;&#x7801;</p>
+<pre><code>john hash.txt
+</code></pre><p><img src="ch2/2/john.png" alt="john"></p>
+<p>&#x7A0D;&#x7B49;&#x7247;&#x523B;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x770B;&#x5230;&#x51FA;&#x73B0;&#x4E86;&#x5BC6;&#x7801;&#xFF0C;&#x7834;&#x89E3;&#x7684;&#x65F6;&#x95F4;&#x957F;&#x77ED;&#x53D6;&#x51B3;&#x4E8E;&#x4F60;&#x5BC6;&#x7801;&#x7684;&#x96BE;&#x5EA6;</p>
+<p><img src="ch2/2/pojie.png" alt="password"></p>
+<h2 id="&#x5BC6;&#x7801;&#x9A8C;&#x8BC1;"><a name="&#x5BC6;&#x7801;&#x9A8C;&#x8BC1;" class="anchor-navigation-ex-anchor" href="#&#x5BC6;&#x7801;&#x9A8C;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x5BC6;&#x7801;&#x9A8C;&#x8BC1;</h2>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x6765;&#x8BD5;&#x4E00;&#x4E0B;&#x5BC6;&#x7801;&#x662F;&#x5426;&#x6B63;&#x786E;
+&#x53F3;&#x952E;&#x89E3;&#x538B;&#x8BE5;&#x538B;&#x7F29;&#x5305;&#xFF0C;&#x5E76;&#x8F93;&#x5165;&#x5BC6;&#x7801;
+<img src="ch2/2/shuru.png" alt="password"></p>
+<p><img src="ch2/2/zhengque.png" alt="password"></p>
+<p>&#x5BC6;&#x7801;&#x6B63;&#x786E;</p>
+<p>&#x60F3;&#x66F4;&#x591A;&#x7684;&#x4E86;&#x89E3;&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD9;&#x4E24;&#x4E2A;&#x94FE;&#x63A5;</p>
+<p><a href="https://tools.kali.org/password-attacks/john" target="_blank">https://tools.kali.org/password-attacks/john</a></p>
+<p><a href="https://www.openwall.com/john/" target="_blank">https://www.openwall.com/john/</a></p>
+<p>&#x662F;&#x4E0D;&#x662F;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x8D76;&#x5FEB;&#x8BD5;&#x4E00;&#x4E0B;</p>
+<p><a href="https://www.bilibili.com/video/av48668838/" title="Video" target="_blank">&#x70B9;&#x51FB;&#x94FE;&#x63A5;&#x89C2;&#x770B;&#x89C6;&#x9891;&#x6559;&#x7A0B;</a></p>
+<p>&#x5982;&#x679C;&#x5E2E;&#x52A9;&#x5230;&#x4F60;&#x4E86;&#xFF0C;&#x5E0C;&#x671B;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4F60;&#x7684;&#x6253;&#x8D4F;&#xFF0C;&#x8C22;&#x8C22;<a href="https://space.bilibili.com/184594996/" title="Bilibili" target="_blank">B&#x7AD9;&#x9891;&#x9053;&#x4F20;&#x9001;&#x95E8;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch2_1.html" class="navigation navigation-prev " aria-label="Previous page: 利用Metasploit中的Eternalblue和Doublepulsar Exploit远程Windows PC">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ch3.html" class="navigation navigation-next " aria-label="Next page: 超简单的Kali桌面美化教程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"如何使用Kali破解加密压缩文件密码","level":"1.3.3","depth":2,"next":{"title":"超简单的Kali桌面美化教程","level":"1.4","depth":1,"path":"ch3.md","ref":"ch3.md","articles":[]},"previous":{"title":"利用Metasploit中的Eternalblue和Doublepulsar Exploit远程Windows PC","level":"1.3.2","depth":2,"path":"ch2_1.md","ref":"ch2_1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["donate","-sharing","sharing-plus","anchor-navigation-ex","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"/Pay/Ali.jpg","alipayText":"支付宝","button":"打赏","title":"","wechat":"/Pay/WeChat.png","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"printLog":false,"multipleH1":true,"mode":"float","showGoTop":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right"},"pageTop":{"showLevelIcon":false,"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right"}},"variables":{},"gitbook":"*","sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false}},"file":{"path":"ch2_2.md","mtime":"2019-04-10T13:53:07.252Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-10T13:53:11.198Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
