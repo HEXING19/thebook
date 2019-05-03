@@ -2,7 +2,10 @@
     "plugins": ["donate",
                 "-sharing",
                 "sharing-plus",
-                "anchor-navigation-ex"],
+                "anchor-navigation-ex",
+                "code",
+                "splitter",
+                "tbfed-pagefooter"],
     "pluginsConfig": {
         "donate": {
           "wechat": "/Pay/WeChat.png",
@@ -13,20 +16,20 @@
           "wechatText": "微信"
         }
     },
-      "sharing": {
-            "douban": false,
-            "facebook": false,
-            "google": false,
+    "sharing": {
+            "douban": true,
+            "facebook": true,
+            "google": true,
             "hatenaBookmark": false,
             "instapaper": false,
             "line": false,
-            "linkedin": false,
+            "linkedin": true,
             "messenger": false,
             "pocket": false,
             "qq": true,
             "qzone": true,
             "stumbleupon": false,
-            "twitter": false,
+            "twitter": true,
             "viber": false,
             "vk": false,
             "weibo": true,
@@ -61,7 +64,12 @@
             "level1Icon": "fa fa-hand-o-right",
             "level2Icon": "fa fa-hand-o-right",
             "level3Icon": "fa fa-hand-o-right"
-    }
+    },
+    "tbfed-pagefooter": {
+            "copyright":"Copyright &copy xxxx.com 2017",
+            "modify_label": "该文件修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        }
 }
 
 }
