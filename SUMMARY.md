@@ -8,6 +8,7 @@
  * [(MS12-020)远程蓝屏对方电脑](ch2_01.md)
  * [利用Metasploit中的Eternalblue和Doublepulsar Exploit远程Windows PC](ch2_1.md)
  * [如何渗透攻击Windows PC](ch2_11.md)
+ * [如何使用ARCANUS工具攻击Windows PC获取Shell](ch2_111.md)
  * [如何渗透攻击Android](ch2_12.md)
  * [编写假病毒？是的，是假病毒](ch2_13.md)
  * [如何使用Kali破解加密压缩文件密码](ch2_2.md)
