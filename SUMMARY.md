@@ -4,6 +4,19 @@
 
 ### Part I
 * [网络基础知识](ch1.md)
+ * [EIGRP入门](ch1_1.md)
+ * [RIP路由汇总](ch1_1.md)
+ * [以太网链路捆绑](ch1_1.md)
+ * [MPLS](ch1_1.md)
+ * [IP SLA入门](ch1_1.md)
+ * [EEM-Cisco嵌入式事件管理](ch1_1.md)
+ * [IPv6动态主机配置](ch1_1.md)
+ * [适用于家庭网络的IPv6动态主机配置](ch1_1.md)
+ * [动态ACL](ch1_1.md)
+ * [自反ACL](ch1_1.md)
+ * [基于上下文的访问控制列表](ch1_1.md)
+ * [单项Telnet的Established](ch1_1.md)
+ * [Private VLAN](ch1_1.md)
  * [小结](ch1_1.md)
  
 ### Part II
@@ -15,6 +28,7 @@
  * [如何使用ARCANUS工具攻击Windows PC获取Shell](ch2_111.md)
  * [如何渗透攻击Android](ch2_12.md)
  * [使用easysploit工具生成Payload攻击Android](ch2_122.md)
+ * [meterpreter命令解释](ch2_123.md)
  * [编写假病毒？是的，是假病毒](ch2_13.md)
  * [如何使用Kali破解加密压缩文件密码](ch2_2.md)
  * [如何使用Hashcat破解加密文档密码](ch2_3.md)
