@@ -29,6 +29,7 @@
  * [如何使用ARCANUS工具攻击Windows PC获取Shell](ch2_111.md)
  * [如何渗透攻击Android](ch2_12.md)
  * [使用easysploit工具生成Payload攻击Android](ch2_122.md)
+ * [安装包注入病毒](ch2_126.md)
  * [meterpreter命令解释](ch2_123.md)
  * [编写假病毒？是的，是假病毒](ch2_13.md)
  * [如何使用Kali破解加密压缩文件密码](ch2_2.md)
